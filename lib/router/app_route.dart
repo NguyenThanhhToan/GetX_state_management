@@ -6,4 +6,6 @@ class AppRoutes {
   static const signupAddName = "/signup/addName";
   static const signupAddPayment = "/signup/addPayment";
   static const signupSuccess = "/signup/success";
+  static const enableLocation = "/enableLocation";
+  static const turnOnNotification = "/turnOnNotification";
 }

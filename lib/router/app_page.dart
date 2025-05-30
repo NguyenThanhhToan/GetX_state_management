@@ -48,6 +48,15 @@ class AppPages {
     GetPage(
       name: AppRoutes.signupSuccess,
       page: () => const SignUpSuccess(),
+    ),
+    GetPage(
+      name: AppRoutes.enableLocation,
+      page: () => const EnableLocation(),
+    ),
+    GetPage(
+      name: AppRoutes.turnOnNotification,
+      page: () => const TurnOnNotification(),
     )
+
   ];
 }
