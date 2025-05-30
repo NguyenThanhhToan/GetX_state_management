@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../controller/add_phone_number_controller.dart';
-import '../../controller/select_country_controller.dart';
-import '../../router/app_route.dart';
-import '../../widget/country_tile.dart';
-
-//Sign in
-
-
-
+import 'controller/add_phone_number_controller.dart';
+import 'controller/select_country_controller.dart';
+import 'widget/country_tile.dart';
 
 class SelectCountryScreen extends GetWidget<SelectCountryController> {
   const SelectCountryScreen({super.key});
@@ -80,27 +74,29 @@ class SelectCountryScreen extends GetWidget<SelectCountryController> {
           ),
         ],
       )),
-      bottomSheet: Obx(() => Padding(
-        padding: const EdgeInsets.fromLTRB(16, 0, 16, 40),
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xFF00DF71),
-            minimumSize: const Size.fromHeight(56),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+        bottomSheet: Obx(() => Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 40),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF00DF71),
+              minimumSize: const Size.fromHeight(56),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+            onPressed: controller.selectedCountry.value != null
+                ? () {
+              final addPhoneController = Get.find<AddPhoneNumberController>();
+              addPhoneController.updateSelectedCountry(controller.selectedCountry.value!);
+              Get.back();
+            }
+                : null,
+            child: const Text(
+              "Next",
+              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ),
-          onPressed: controller.selectedCountryCode.value != null
-              ? () {
-            final addPhoneController = Get.find<AddPhoneNumberController>();
-            addPhoneController.updateCountryCode(controller.selectedCountryCode.value!);
-            Get.back();
-          }
-              : null,
-          child: const Text("Next",
-              style: TextStyle(color: Colors.white, fontSize: 18)),
-        ),
-      )),
+        ))
     );
   }
 }

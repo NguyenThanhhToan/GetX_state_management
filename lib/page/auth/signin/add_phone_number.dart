@@ -1,15 +1,16 @@
+import 'package:country_pickers/utils/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-
-import '../../controller/add_phone_number_controller.dart';
-import '../../router/app_route.dart';
+import '../../../translation/strings.dart';
+import '../../../router/app_route.dart';
+import 'controller/add_phone_number_controller.dart';
 
 class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
   const AddPhoneScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final t = T(context);
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(40),
@@ -21,18 +22,18 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Hi!',
+            Text(
+              t.hi,
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
-            const Text(
-              "What's your mobile?",
+            Text(
+            t.whatsYourMobile,
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            const Text(
-              "A valid mobile number is required for verification",
-              style: TextStyle(fontSize: 18),
+            Text(
+              t.validMobileRequired,
+              style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 15),
             Row(
@@ -47,15 +48,10 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
                     ),
                     child: Row(
                       children: [
-                        SvgPicture.asset(
-                          'assets/icons/country/${controller.countryCode.value.toUpperCase()}.svg',
-                          width: 24,
-                          height: 16,
-                          fit: BoxFit.cover,
-                        ),
+                        CountryPickerUtils.getDefaultFlagImage(controller.selectedCountry.value),
                         const SizedBox(width: 8),
                         Text(
-                          controller.dialCode.value,
+                          controller.dialCode,
                           style: const TextStyle(fontSize: 20),
                         ),
                       ],
@@ -66,7 +62,7 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
                 Expanded(
                   child: Obx(() {
                     return TextField(
-                      controller: controller.textEditingController, // cần thêm controller TextEditingController
+                      controller: controller.textEditingController,
                       onChanged: controller.updatePhoneNumber,
                       keyboardType: TextInputType.phone,
                       style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
@@ -87,9 +83,9 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
                       ),
                     );
                   }),
-                )
+                ),
               ],
-            ),
+            )
           ],
         ),
       ),
@@ -107,11 +103,11 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
             if (controller.validPhoneNumber()) {
               Get.toNamed(
                   AppRoutes.otpConfirm,
-                  arguments: {'phone': controller.phoneNumber.value}
+                  arguments: {'phone': '+84${controller.phoneNumber.value}'},
               );
             }
           },
-          child: const Text("Next",
+          child: Text(t.next,
               style: TextStyle(color: Colors.white, fontSize: 18)),
         )
       )

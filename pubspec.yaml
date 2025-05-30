@@ -10,16 +10,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   get: ^4.7.2
   dio: ^5.8.0+1
   flutter_svg: ^2.1.0
-
+  flutter_native_splash: ^2.4.6
+  country_pickers: ^3.0.1
   cupertino_icons: ^1.0.8
+  flutter_i18n: ^0.36.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
@@ -27,3 +31,9 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/icons/country/
+    - assets/i18n/
+
+flutter_native_splash:
+  color: "#ffffff"
+  android: true
+  ios: true

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import 'auth/login.dart';
+import 'auth/signin/login.dart';
 
 class StartUpScreen extends StatelessWidget {
   const StartUpScreen ({super.key});
