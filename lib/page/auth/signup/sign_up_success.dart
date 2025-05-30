@@ -16,8 +16,9 @@ class SignUpSuccess extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 210),
             SvgPicture.asset('assets/icons/approve_1.svg', width: 200, height: 200),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
             const Text(
               "Success!",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.black),
@@ -31,10 +32,25 @@ class SignUpSuccess extends StatelessWidget {
               "your payment method",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
             ),
-            const SizedBox(height: 90),
+            const SizedBox(height: 200),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: ElevatedButton(
+                onPressed: (){},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  minimumSize: const Size.fromHeight(56),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                   )
+                ),
+                  child: const Text("Continue",style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
+              ),
+            )
           ],
         ),
       ),
+
     );
   }
 }
