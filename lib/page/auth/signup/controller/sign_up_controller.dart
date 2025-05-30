@@ -33,13 +33,6 @@ class SignUpController extends GetxController {
   }
 
   void completeSignUp() {
-    print("📝 SignUp Info:");
-    print("First Name: ${firstName.value}");
-    print("Last Name: ${lastName.value}");
-    print("Card Number: ${cardNumber.value}");
-    print("Card Holder Name: ${cardHolderName.value}");
-    print("Expiry Date: ${expiryDate.value}");
-    print("CVV: ${cvv.value}");
 
     if (firstName.value.isNotEmpty &&
         lastName.value.isNotEmpty &&

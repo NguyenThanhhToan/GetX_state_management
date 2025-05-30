@@ -26,5 +26,8 @@
   "card_holder_name": "Card Holder Name",
   "expiry_date": "Expiry Date",
   "cvv": "CVV",
-  "add": "Add"
+  "add": "Add",
+  "success": "Success",
+  "success1": "You have successfully added",
+  "success2": "your payment method"
 }
