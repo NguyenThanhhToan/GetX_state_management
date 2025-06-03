@@ -29,5 +29,14 @@
   "add": "Add",
   "success": "Success",
   "success1": "You have successfully added",
-  "success2": "your payment method"
+  "success2": "your payment method",
+  "continue": "Continue",
+  "enable_location": "Enable your location",
+  "enable_location1": "We ues this to set your pick up add delivery location",
+  "skip_for_now": "Skip for now",
+  "can_change_in_setting": "You can change this anytime in the ios setting",
+  "enable_location_bnt": "Use My Location",
+  "turn_on_notification": "Last but not least",
+  "turn_on_notification1": "Tủn on push notifications so you won't miss any updates of your requests.",
+  "turn_on_notification_bnt": "Turn on Notifications"
 }

@@ -1,7 +1,8 @@
+import 'package:example_app/router/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import '../../../router/app_route.dart';
+import '../../../data/asset/asset_keys.dart';
 import '../../../translation/strings.dart';
 
 class SignUpSuccess extends StatelessWidget {
@@ -18,36 +19,36 @@ class SignUpSuccess extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 210),
-            SvgPicture.asset('assets/icons/approve_1.svg', width: 200, height: 200),
+            SvgPicture.asset(Assets.approveIcon, width: 200, height: 200),
             const SizedBox(height: 10),
-            const Text(
-              "Success!",
+            Text(
+              t.success,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.black),
             ),
             const SizedBox(height: 10),
-            const Text(
-              "You have successfully added",
+            Text(
+              t.success1,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
             ),
-            const Text(
-              "your payment method",
+            Text(
+              t.success2,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
             ),
             const SizedBox(height: 200),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: ElevatedButton(
-                onPressed: (){
-                  Get.offAllNamed(AppRoutes.enableLocation);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  minimumSize: const Size.fromHeight(56),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15),
-                   )
-                ),
-                  child: const Text("Continue",style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
+                  onPressed: (){
+                    Get.offNamed(AppRoutes.enableLocation);
+                  },
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      minimumSize: const Size.fromHeight(56),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      )
+                  ),
+                  child: Text(t.bntContinue,style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
               ),
             )
           ],
@@ -67,29 +68,47 @@ class EnableLocation extends StatelessWidget {
       backgroundColor: const Color(0xFF00DF71),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 210),
-            SvgPicture.asset('assets/icons/approve_1.svg', width: 200, height: 200),
-            const SizedBox(height: 10),
-            const Text(
-              "Success!",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.black),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              "You have successfully added",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            const Text(
-              "your payment method",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            const SizedBox(height: 200),
+            SizedBox(height: 110,),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                t.enableLocation,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(t.enableLocation1, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white),),
+            ),
+            const SizedBox(height: 100,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SvgPicture.asset(Assets.locationIcon, width: 220, height: 220),
+              ],
+            ),
+            const SizedBox(height: 160,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
+              ],
+            ),
+            const SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 15.0),
               child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Get.offNamed(AppRoutes.turnOnNotification);
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       minimumSize: const Size.fromHeight(56),
@@ -97,8 +116,14 @@ class EnableLocation extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       )
                   ),
-                  child: const Text("Continue",style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
+                  child: Text(t.enableLocationBtn,style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(t.canChangeInSetting, style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white))
+              ],
             )
           ],
         ),
@@ -117,29 +142,47 @@ class TurnOnNotification extends StatelessWidget {
       backgroundColor: const Color(0xFF00DF71),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 210),
-            SvgPicture.asset('assets/icons/approve_1.svg', width: 200, height: 200),
-            const SizedBox(height: 10),
-            const Text(
-              "Success!",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800, color: Colors.black),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              "You have successfully added",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            const Text(
-              "your payment method",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
-            ),
-            const SizedBox(height: 200),
+            SizedBox(height: 110,),
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                t.turnOnNotification,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            const SizedBox(height: 15,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(t.turnOnNotification1, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white),),
+            ),
+            const SizedBox(height: 100,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(width: 55,),
+                SvgPicture.asset(Assets.notificationIcon, width: 220, height: 220),
+              ],
+            ),
+            const SizedBox(height: 160,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
+              ],
+            ),
+            const SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 15.0),
               child: ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
                       minimumSize: const Size.fromHeight(56),
@@ -147,8 +190,14 @@ class TurnOnNotification extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15),
                       )
                   ),
-                  child: const Text("Continue",style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
+                  child: Text(t.turnOnNotificationBtn,style: TextStyle(color: Color(0xFF00DF71),fontWeight: FontWeight.bold, fontSize: 16),)
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(t.canChangeInSetting, style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white))
+              ],
             )
           ],
         ),

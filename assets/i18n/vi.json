@@ -26,5 +26,19 @@
   "card_holder_name": "Tên chủ thẻ",
   "expiry_date": "Ngày hết hạn",
   "cvv": "CVV",
-  "add": "Thêm"
+  "add": "Thêm",
+  "success": "Thành công!",
+  "success1": "Bạn đã thêm thành công",
+  "success2": "phương thức thanh toán của mình",
+  "continue": "Tiếp tục",
+
+  "enable_location": "Bật định vị",
+  "enable_location1": "Chúng tôi sử dụng định vị để xác định vị trí lấy và giao hàng của bạn",
+  "skip_for_now": "Bỏ qua lúc này",
+  "can_change_in_setting": "Bạn có thể thay đổi điều này bất kỳ lúc nào trong phần cài đặt",
+  "enable_location_bnt": "Dùng vị trí của tôi",
+
+  "turn_on_notification": "Cuối cùng nhưng không kém phần quan trọng",
+  "turn_on_notification1": "Bật thông báo đẩy để không bỏ lỡ bất kỳ cập nhật nào về đơn hàng của bạn.",
+  "turn_on_notification_bnt": "Bật thông báo"
 }

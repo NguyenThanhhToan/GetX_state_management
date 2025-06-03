@@ -36,5 +36,17 @@ class T {
   String get expiryDate => FlutterI18n.translate(context, "expiry_date");
   String get cvv => FlutterI18n.translate(context, "cvv");
   String get add => FlutterI18n.translate(context, "add");
+  String get success => FlutterI18n.translate(context, "success");
+  String get success1 => FlutterI18n.translate(context, "success1");
+  String get success2 => FlutterI18n.translate(context, "success2");
+  String get bntContinue => FlutterI18n.translate(context, "continue");
+  String get enableLocation => FlutterI18n.translate(context, "enable_location");
+  String get enableLocation1 => FlutterI18n.translate(context, "enable_location1");
+  String get skipForNow => FlutterI18n.translate(context, "skip_for_now");
+  String get canChangeInSetting => FlutterI18n.translate(context, "can_change_in_setting");
+  String get enableLocationBtn => FlutterI18n.translate(context, "enable_location_bnt");
+  String get turnOnNotification => FlutterI18n.translate(context, "turn_on_notification");
+  String get turnOnNotification1 => FlutterI18n.translate(context, "turn_on_notification1");
+  String get turnOnNotificationBtn => FlutterI18n.translate(context, "turn_on_notification_bnt");
 
 }

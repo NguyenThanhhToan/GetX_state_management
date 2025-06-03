@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import '../../../data/asset/asset_keys.dart';
 import '../../../translation/strings.dart';
 import 'controller/sign_up_controller.dart';
 
@@ -30,7 +31,7 @@ class SignUpPayment extends GetWidget<SignUpController> {
             Text(t.addDescription, style: const TextStyle(fontSize: 17)),
             const SizedBox(height: 25),
 
-            SvgPicture.asset('assets/icons/Group.svg', width: 44, height: 44),
+            SvgPicture.asset(Assets.groupIcon, width: 44, height: 44),
 
             const SizedBox(height: 20),
             TextField(
@@ -52,7 +53,7 @@ class SignUpPayment extends GetWidget<SignUpController> {
                 suffixIcon: Padding(
                   padding: const EdgeInsets.all(12),
                   child: SvgPicture.asset(
-                    "assets/icons/CreditCard.svg",
+                    Assets.creditCardIcon,
                     width: 20,
                     height: 20,
                   ),

@@ -1,6 +1,8 @@
 import 'package:example_app/page/auth/signin/widget/signin_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../data/asset/asset_keys.dart';
+import '../../../router/app_route.dart';
 import '../../../translation/strings.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -19,7 +21,7 @@ class LoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 85),
-                SvgPicture.asset('assets/icons/Main.svg', width: 140, height: 105),
+                SvgPicture.asset(Assets.mainIcon, width: 140, height: 105),
                 const SizedBox(height: 145),
                 Text(t.welcome, style: TextStyle(fontSize: 18)),
                 Text(
@@ -29,18 +31,18 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 40),
                 SignItem(
                   title: t.continueGoogle,
-                  icon: "assets/icons/google_signIn.svg",
-                  route: '/addPhone',
+                  icon: Assets.googleIcon,
+                  route: AppRoutes.addPhone,
                 ),
                 SignItem(
                   title: t.continueWeChat,
-                  icon: "assets/icons/weChat_signIn.svg",
-                  route: '/addPhone',
+                  icon: Assets.weChatIcon,
+                  route: AppRoutes.addPhone,
                 ),
                 SignItem(
                   title: t.continueFacebook,
-                  icon: "assets/icons/facebook_signIn.svg",
-                  route: '/addPhone',
+                  icon: Assets.facebookIcon,
+                  route: AppRoutes.addPhone,
                 ),
                 const SizedBox(
                   height: 50,
@@ -50,8 +52,8 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SignItem(
                   title: t.continueMobile,
-                  icon: "assets/icons/phone_signIn.svg",
-                  route: '/addPhone',
+                  icon: Assets.phoneIcon,
+                  route: AppRoutes.addPhone,
                 ),
               ],
             ),
