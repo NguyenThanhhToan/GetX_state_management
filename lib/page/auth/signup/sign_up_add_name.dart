@@ -80,7 +80,9 @@ class SignUpFullName extends GetWidget<SignUpController> {
             ),
           ),
           onPressed: () {
-            Get.toNamed(AppRoutes.signupAddPayment);
+            if (controller.validateStep1()) {
+              Get.toNamed(AppRoutes.signupAddPayment);
+            }
           },
           child: const Text(
             "Next",

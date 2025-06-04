@@ -36,9 +36,9 @@ class OtpConfirmController extends GetxController {
     for (int i = 0; i < 6; i++) {
       ever(otp[i], (val) {
         final controller = controllers[i];
-        final selection = controller.selection ?? TextSelection.collapsed(offset: controller.text.length);
+        final selection = controller.selection;
         controller.value = TextEditingValue(
-          text: val ?? '',
+          text: val,
           selection: selection,
           composing: TextRange.empty,
         );

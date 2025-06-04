@@ -31,9 +31,9 @@ class AddPhoneNumberController extends GetxController {
       Get.snackbar('Error', 'Phone Number cannot be empty');
       return false;
     }
-
-    if (phone.length < 10 || !RegExp(r'^\d+$').hasMatch(phone)) {
-      Get.snackbar('Error', 'Invalid phone number');
+    
+    if (!RegExp(r'^0\d{9,10}$').hasMatch(phone)) {
+      Get.snackbar('Error', 'Invalid phone number format');
       return false;
     }
 
