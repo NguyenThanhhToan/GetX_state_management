@@ -25,7 +25,7 @@ class CustomNavBar extends StatelessWidget {
         Get.offAllNamed(AppRoutes.inbox);
         break;
       case 3:
-        Get.offAllNamed(AppRoutes.account);
+        Get.toNamed(AppRoutes.account);
         break;
       default:
         break;

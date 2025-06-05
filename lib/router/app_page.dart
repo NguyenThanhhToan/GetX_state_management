@@ -10,6 +10,7 @@ import '../page/auth/signup/sign_up_add_name.dart';
 import '../page/auth/signup/sign_up_add_payment.dart';
 import '../page/auth/signup/sign_up_success.dart';
 import '../page/navAccount/account.dart';
+import '../page/navAccount/controller/accountController.dart';
 import '../page/navCurrent/current.dart';
 import '../page/navInbox/inbox.dart';
 import '../page/navNew/controller/services_controller.dart';
@@ -80,6 +81,9 @@ class AppPages {
     GetPage(
       name: AppRoutes.account,
       page: () => const AccountScreen(),
+      binding: BindingsBuilder((){
+        Get.lazyPut(() => AccountController());
+      }),
     ),
   ];
 }
