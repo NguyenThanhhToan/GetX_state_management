@@ -8,4 +8,8 @@ class AppRoutes {
   static const signupSuccess = "/signup/success";
   static const enableLocation = "/enableLocation";
   static const turnOnNotification = "/turnOnNotification";
+  static const service = "/service";
+  static const current = "/current";
+  static const inbox = "/inbox";
+  static const account = "/account";
 }

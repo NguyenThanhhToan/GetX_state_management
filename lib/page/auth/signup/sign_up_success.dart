@@ -96,11 +96,16 @@ class EnableLocation extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 160,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
-              ],
+            GestureDetector(
+              onTap: (){
+                Get.offAllNamed(AppRoutes.service);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
+                ],
+              ),
             ),
             const SizedBox(height: 10,),
             Padding(
@@ -171,17 +176,23 @@ class TurnOnNotification extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 160,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
-              ],
+            GestureDetector(
+              onTap: (){
+                Get.offAllNamed(AppRoutes.service);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(t.skipForNow, style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.white))
+                ],
+              ),
             ),
             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 15.0),
               child: ElevatedButton(
                   onPressed: (){
+                    Get.offAllNamed(AppRoutes.service);
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,

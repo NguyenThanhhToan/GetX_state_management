@@ -1,8 +1,12 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../service/authService.dart';
+
 
 class SignUpController extends GetxController {
+  AuthService authService = Get.find();
+
   final firstName = ''.obs;
   final lastName = ''.obs;
   final cardNumber = ''.obs;
@@ -100,6 +104,8 @@ class SignUpController extends GetxController {
       );
       return false;
     }
+    authService.userFirstName(firstName.value);
+    authService.userLastName(lastName.value);
     return true;
   }
 

@@ -1,14 +1,19 @@
 import 'package:get/get.dart';
-import '../page/auth/signin/add_phone_number.dart';
-import '../page/auth/signin/controller/add_phone_number_controller.dart';
-import '../page/auth/signin/controller/otp_confirm_controller.dart';
-import '../page/auth/signin/otp_confirm.dart';
-import '../page/auth/signin/select_country.dart';
-import '../page/auth/signin/controller/select_country_controller.dart';
+import '../page/auth/signIn/add_phone_number.dart';
+import '../page/auth/signIn/controller/add_phone_number_controller.dart';
+import '../page/auth/signIn/controller/otp_confirm_controller.dart';
+import '../page/auth/signIn/otp_confirm.dart';
+import '../page/auth/signIn/select_country.dart';
+import '../page/auth/signIn/controller/select_country_controller.dart';
 import '../page/auth/signup/controller/sign_up_controller.dart';
 import '../page/auth/signup/sign_up_add_name.dart';
 import '../page/auth/signup/sign_up_add_payment.dart';
 import '../page/auth/signup/sign_up_success.dart';
+import '../page/navAccount/account.dart';
+import '../page/navCurrent/current.dart';
+import '../page/navInbox/inbox.dart';
+import '../page/navNew/controller/services_controller.dart';
+import '../page/navNew/new.dart';
 import 'app_route.dart';
 
 class AppPages {
@@ -56,7 +61,25 @@ class AppPages {
     GetPage(
       name: AppRoutes.turnOnNotification,
       page: () => const TurnOnNotification(),
-    )
-
+    ),
+    GetPage(
+      name: AppRoutes.service,
+      page: () => const ServiceScreen(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut(() => ServiceController());
+      }),
+    ),
+    GetPage(
+      name: AppRoutes.current,
+      page: () => const CurrentScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.inbox,
+      page: () => const InboxScreen(),
+    ),
+    GetPage(
+      name: AppRoutes.account,
+      page: () => const AccountScreen(),
+    ),
   ];
 }

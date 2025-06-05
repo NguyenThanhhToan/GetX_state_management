@@ -48,5 +48,17 @@ class T {
   String get turnOnNotification => FlutterI18n.translate(context, "turn_on_notification");
   String get turnOnNotification1 => FlutterI18n.translate(context, "turn_on_notification1");
   String get turnOnNotificationBtn => FlutterI18n.translate(context, "turn_on_notification_bnt");
+  // nav bar
+  String get navBar1 => FlutterI18n.translate(context, "nav_bar1");
+  String get navBar2 => FlutterI18n.translate(context, "nav_bar2");
+  String get navBar3 => FlutterI18n.translate(context, "nav_bar3");
+  String get navBar4 => FlutterI18n.translate(context, "nav_bar4");
+
+  // service
+  String get goodMor => FlutterI18n.translate(context, "good_mor");
+  String get serviceText1 => FlutterI18n.translate(context, "service_text1");
+  String get service1 => FlutterI18n.translate(context, "service1");
+  String get service2 => FlutterI18n.translate(context, "service2");
+  String get service3 => FlutterI18n.translate(context, "service3");
 
 }

@@ -38,5 +38,16 @@
   "enable_location_bnt": "Use My Location",
   "turn_on_notification": "Last but not least",
   "turn_on_notification1": "Tủn on push notifications so you won't miss any updates of your requests.",
-  "turn_on_notification_bnt": "Turn on Notifications"
+  "turn_on_notification_bnt": "Turn on Notifications",
+
+  "nav_bar1": "New",
+  "nav_bar2": "Current",
+  "nav_bar3": "Inbox",
+  "nav_bar4": "Account",
+
+  "good_mor": "Good morning",
+  "service_text1": "Do you have anything that need to find someone to help?",
+  "service1": "PARKING METER",
+  "service2": "COURIER SERVICE",
+  "service3": "GROCERY DELIVERY"
 }

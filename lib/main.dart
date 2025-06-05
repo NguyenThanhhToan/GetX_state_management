@@ -1,12 +1,14 @@
 import 'package:example_app/page/splash_screen.dart';
 import 'package:example_app/router/app_page.dart';
+import 'package:example_app/service/authService.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_i18n/flutter_i18n_delegate.dart';
 import 'package:flutter_i18n/loaders/file_translation_loader.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
+  Get.put(AuthService());
   runApp(const MyApp());
 }
 
