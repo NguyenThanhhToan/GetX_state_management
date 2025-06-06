@@ -33,4 +33,18 @@ class Assets {
   static const String serviceItem4 = 'assets/icons/sv4.svg';
   static const String serviceItem5 = 'assets/icons/sv5.svg';
   static const String nextIcon = 'assets/icons/next.svg';
+
+  // Account Screen
+  static const String arrowRight = 'assets/icons/CaretRight.svg';
+  static const String account1 = 'assets/icons/account1.svg';
+  static const String account2 = 'assets/icons/account2.svg';
+  static const String account3 = 'assets/icons/account3.svg';
+  static const String account4 = 'assets/icons/account4.svg';
+  static const String account5 = 'assets/icons/account5.svg';
+  static const String account6 = 'assets/icons/account6.svg';
+  static const String account7 = 'assets/icons/account7.svg';
+  static const String account8 = 'assets/icons/account8.svg';
+  static const String account9 = 'assets/icons/account9.svg';
+
+
 }

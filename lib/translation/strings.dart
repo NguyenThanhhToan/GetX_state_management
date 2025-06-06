@@ -61,4 +61,16 @@ class T {
   String get service2 => FlutterI18n.translate(context, "service2");
   String get service3 => FlutterI18n.translate(context, "service3");
 
+  // account
+  String get account => FlutterI18n.translate(context, "account");
+  String get general => FlutterI18n.translate(context, "general");
+  String get accountText1 => FlutterI18n.translate(context, "accountText1");
+  String get accountText2 => FlutterI18n.translate(context, "accountText2");
+  String get accountText3 => FlutterI18n.translate(context, "accountText3");
+  String get accountText4 => FlutterI18n.translate(context, "accountText4");
+  String get accountText5 => FlutterI18n.translate(context, "accountText5");
+  String get accountText6 => FlutterI18n.translate(context, "accountText6");
+  String get accountText7 => FlutterI18n.translate(context, "accountText7");
+  String get accountText8 => FlutterI18n.translate(context, "accountText8");
+  String get accountText9 => FlutterI18n.translate(context, "accountText9");
 }

@@ -10,7 +10,9 @@ import '../page/auth/signup/sign_up_add_name.dart';
 import '../page/auth/signup/sign_up_add_payment.dart';
 import '../page/auth/signup/sign_up_success.dart';
 import '../page/navAccount/account.dart';
-import '../page/navAccount/controller/accountController.dart';
+import '../page/navAccount/account_info.dart';
+import '../page/navAccount/controller/account_controller.dart';
+import '../page/navAccount/controller/account_info_controller.dart';
 import '../page/navCurrent/current.dart';
 import '../page/navInbox/inbox.dart';
 import '../page/navNew/controller/services_controller.dart';
@@ -85,5 +87,12 @@ class AppPages {
         Get.lazyPut(() => AccountController());
       }),
     ),
+    GetPage(
+      name: AppRoutes.accountInfo,
+      page: () => const AccountInfo(),
+      binding: BindingsBuilder((){
+        Get.lazyPut(() => AccountInfoController());
+      }),
+    )
   ];
 }

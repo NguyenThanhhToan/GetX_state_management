@@ -93,12 +93,9 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
             ),
           ),
         ),
-        // ✅ Đặt đúng vị trí bên trong Scaffold
+
         bottomSheet: Padding(
-          padding: EdgeInsets.fromLTRB(
-            16,
-            0,
-            16,
+          padding: EdgeInsets.fromLTRB(16, 0, 16,
             MediaQuery.of(context).viewPadding.bottom + 16,
           ),
           child: ElevatedButton(
@@ -110,12 +107,7 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
               ),
             ),
             onPressed: () {
-              if (controller.validPhoneNumber()) {
-                Get.toNamed(
-                  AppRoutes.otpConfirm,
-                  arguments: {'phone': '+84${controller.phoneNumber.value}'},
-                );
-              }
+              controller.addPhoneNumber();
             },
             child: Text(
               t.next,

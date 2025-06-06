@@ -49,5 +49,17 @@
   "service_text1": "Do you have anything that need to find someone to help?",
   "service1": "PARKING METER",
   "service2": "COURIER SERVICE",
-  "service3": "GROCERY DELIVERY"
+  "service3": "GROCERY DELIVERY",
+
+  "account": "Account",
+  "general": "General",
+  "accountText1": "Account Info",
+  "accountText2": "History",
+  "accountText3": "Payment Method",
+  "accountText4": "Language",
+  "accountText5": "Switch to Provider View",
+  "accountText6": "Contact Support",
+  "accountText7": "Teams and Conditions",
+  "accountText8": "Privacy Policy",
+  "accountText9": "Logout"
 }

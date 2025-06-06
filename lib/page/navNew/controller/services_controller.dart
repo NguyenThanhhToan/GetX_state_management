@@ -8,6 +8,7 @@ class ServiceController extends GetxController{
   RxString get userFirstName => authService.firstName;
   RxString get userLastName => authService.lastName;
   bool get isLogged => authService.isLogged.value;
+  RxString get phoneNumber => authService.phoneNumber;
 
   final List<Map<String, String>> mockServices = [
     {'name': 'PARKING METER', 'icon': Assets.serviceItem5},

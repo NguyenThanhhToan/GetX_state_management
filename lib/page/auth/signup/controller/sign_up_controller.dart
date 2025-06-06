@@ -138,6 +138,10 @@ class SignUpController extends GetxController {
       );
       return false;
     }
+    authService.userCardNumber(cardNumber.value);
+    authService.userCardName(cardHolderName.value);
+    authService.userCardDate(expiryDate.value);
+    authService.userCardCvv(cvv.value);
     return true;
   }
 

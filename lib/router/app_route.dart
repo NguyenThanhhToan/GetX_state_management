@@ -12,4 +12,5 @@ class AppRoutes {
   static const current = "/current";
   static const inbox = "/inbox";
   static const account = "/account";
+  static const accountInfo = "/accountInfo";
 }
