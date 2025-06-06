@@ -13,4 +13,6 @@ class AppRoutes {
   static const inbox = "/inbox";
   static const account = "/account";
   static const accountInfo = "/accountInfo";
+  static const history = "/history";
+  static const rateService = "/rateService";
 }

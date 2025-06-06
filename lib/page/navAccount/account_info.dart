@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../component/navbar.dart';
+import '../../translation/strings.dart';
 import 'controller/account_info_controller.dart';
 
 class AccountInfo extends GetWidget<AccountInfoController> {
@@ -8,12 +9,13 @@ class AccountInfo extends GetWidget<AccountInfoController> {
 
   @override
   Widget build(BuildContext context) {
+    final t = T(context);
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Obx(() => Scaffold(
         appBar: AppBar(
-          title: const Text(
-            'ACCOUNT INFO',
+          title: Text(
+            t.accountTitle,
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
           ),
           backgroundColor: Colors.white,
@@ -24,8 +26,8 @@ class AccountInfo extends GetWidget<AccountInfoController> {
               if (!controller.isEditing.value) {
                 return TextButton(
                   onPressed: controller.toggleEdit,
-                  child: const Text(
-                    'Edit',
+                  child: Text(
+                    t.accountEdit,
                     style: TextStyle(fontSize: 17, color: Color(0xFF00DF71)),
                   ),
                 );
@@ -43,19 +45,20 @@ class AccountInfo extends GetWidget<AccountInfoController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("First Name", style: TextStyle(fontWeight: FontWeight.w300)),
+
+                Text(t.fName, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),
                 buildTextField(controller.firstNameController, controller.isEditing.value),
                 const SizedBox(height: 15),
-                const Text("Last Name", style: TextStyle(fontWeight: FontWeight.w300)),
+                Text(t.lName, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),
                 buildTextField(controller.lastNameController, controller.isEditing.value),
                 const SizedBox(height: 15),
-                const Text("Phone Number", style: TextStyle(fontWeight: FontWeight.w300)),
+                Text(t.phoneNumber, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),
                 buildTextField(controller.phoneController, controller.isEditing.value),
                 const SizedBox(height: 15),
-                const Text("Email", style: TextStyle(fontWeight: FontWeight.w300)),
+                Text(t.email, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),
                 buildTextField(controller.emailController, controller.isEditing.value),
               ],
@@ -76,8 +79,8 @@ class AccountInfo extends GetWidget<AccountInfoController> {
               ),
             ),
             onPressed: controller.saveChanges,
-            child: const Text(
-              'Save',
+            child: Text(
+              t.accountBnt,
               style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           ),

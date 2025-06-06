@@ -13,6 +13,10 @@ import '../page/navAccount/account.dart';
 import '../page/navAccount/account_info.dart';
 import '../page/navAccount/controller/account_controller.dart';
 import '../page/navAccount/controller/account_info_controller.dart';
+import '../page/navAccount/controller/history_controller.dart';
+import '../page/navAccount/controller/rating_controller.dart';
+import '../page/navAccount/history.dart';
+import '../page/navAccount/rating_sercive.dart';
 import '../page/navCurrent/current.dart';
 import '../page/navInbox/inbox.dart';
 import '../page/navNew/controller/services_controller.dart';
@@ -92,6 +96,20 @@ class AppPages {
       page: () => const AccountInfo(),
       binding: BindingsBuilder((){
         Get.lazyPut(() => AccountInfoController());
+      }),
+    ),
+    GetPage(
+      name:AppRoutes.history,
+      page: () => const History(),
+      binding: BindingsBuilder((){
+        Get.lazyPut(() => HistoryController());
+      }),
+    ),
+    GetPage(
+      name: AppRoutes.rateService,
+      page: () => const RatingService(),
+      binding: BindingsBuilder((){
+        Get.lazyPut(() => RatingController());
       }),
     )
   ];

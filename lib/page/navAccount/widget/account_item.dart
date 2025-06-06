@@ -17,14 +17,14 @@ class AccountItem extends StatelessWidget{
      onTap: () => Get.toNamed(route),
      child: Container(
        padding: const EdgeInsets.fromLTRB(10, 13, 10, 14),
-         decoration: const BoxDecoration(
-           border: Border(
-             bottom: BorderSide(
-               color: Color(0xFFE0E0E0),
-               width: 1,
-             ),
+       decoration: const BoxDecoration(
+         border: Border(
+           bottom: BorderSide(
+             color: Color(0xFFE0E0E0),
+             width: 1,
            ),
          ),
+       ),
        child: Row(
          children: [
            Expanded(

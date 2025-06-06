@@ -71,7 +71,7 @@ class AccountScreen extends GetWidget<AccountController> {
                   AccountItem(
                     label: t.accountText2,
                     icon: Assets.account2,
-                    route: "/settings",
+                    route: AppRoutes.history,
                   ),
                   AccountItem(
                     label: t.accountText3,

@@ -62,15 +62,38 @@ class T {
   String get service3 => FlutterI18n.translate(context, "service3");
 
   // account
+  String get accountTitle => FlutterI18n.translate(context, "account_title");
   String get account => FlutterI18n.translate(context, "account");
   String get general => FlutterI18n.translate(context, "general");
-  String get accountText1 => FlutterI18n.translate(context, "accountText1");
-  String get accountText2 => FlutterI18n.translate(context, "accountText2");
-  String get accountText3 => FlutterI18n.translate(context, "accountText3");
-  String get accountText4 => FlutterI18n.translate(context, "accountText4");
-  String get accountText5 => FlutterI18n.translate(context, "accountText5");
-  String get accountText6 => FlutterI18n.translate(context, "accountText6");
-  String get accountText7 => FlutterI18n.translate(context, "accountText7");
-  String get accountText8 => FlutterI18n.translate(context, "accountText8");
-  String get accountText9 => FlutterI18n.translate(context, "accountText9");
+  String get accountText1 => FlutterI18n.translate(context, "account_text1");
+  String get accountText2 => FlutterI18n.translate(context, "account_text2");
+  String get accountText3 => FlutterI18n.translate(context, "account_text3");
+  String get accountText4 => FlutterI18n.translate(context, "account_text4");
+  String get accountText5 => FlutterI18n.translate(context, "account_text5");
+  String get accountText6 => FlutterI18n.translate(context, "account_text6");
+  String get accountText7 => FlutterI18n.translate(context, "account_text7");
+  String get accountText8 => FlutterI18n.translate(context, "account_text8");
+  String get accountText9 => FlutterI18n.translate(context, "account_text9");
+  String get accountBnt => FlutterI18n.translate(context, "account_bnt");
+  String get accountEdit => FlutterI18n.translate(context, "account_edit");
+  String get phoneNumber => FlutterI18n.translate(context, "phone_number");
+  String get email => FlutterI18n.translate(context, "email");
+
+  // history
+  String get historyTitle => FlutterI18n.translate(context, "history_title");
+  String get historyText1 => FlutterI18n.translate(context, "history_text1");
+  String get historyText2 => FlutterI18n.translate(context, "history_text2");
+  String get historyText3 => FlutterI18n.translate(context, "history_text3");
+  String get historyText4 => FlutterI18n.translate(context, "history_text4");
+
+  //ratingService
+  String get rateServiceTitle => FlutterI18n.translate(context, "rate_service_title");
+  String get rateOption1 => FlutterI18n.translate(context, "rate_option1");
+  String get rateOption2 => FlutterI18n.translate(context, "rate_option2");
+  String get rateOption3 => FlutterI18n.translate(context, "rate_option3");
+  String get rateOption4 => FlutterI18n.translate(context, "rate_option4");
+  String get skip => FlutterI18n.translate(context, "skip");
+  String get confirm => FlutterI18n.translate(context, "confirm");
+
+
 }
