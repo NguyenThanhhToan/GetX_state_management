@@ -72,7 +72,7 @@ Widget _buildRating(String rating) {
   if (rating == 'unrated') {
     return  GestureDetector(
       onTap: () {
-        Get.toNamed(AppRoutes.rateService);
+        Get.toNamed(AppRoutes.rateService, arguments: {'source': 'service'});
       },
       child:
         Text('Rate it', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF00DF71)))
@@ -80,7 +80,7 @@ Widget _buildRating(String rating) {
   } else if (rating == 'dispute') {
     return const Text('Dispute', style: TextStyle( fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFFCD7013)));
   } else {
-    // Parse số sao
+
     final starCount = int.tryParse(rating) ?? 0;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,

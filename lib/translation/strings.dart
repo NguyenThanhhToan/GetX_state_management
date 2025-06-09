@@ -15,6 +15,7 @@ class T {
   String get next => FlutterI18n.translate(context, "next");
   String get validMobileRequired => FlutterI18n.translate(context, "valid_mobile_required");
   String get whatsYourMobile => FlutterI18n.translate(context, "whats_your_mobile");
+  String get updateNubmerPhone => FlutterI18n.translate(context, "update_phone_number");
   String get letsSignIn => FlutterI18n.translate(context, "lets_sign_in");
   String get continueGoogle => FlutterI18n.translate(context, "continue_google");
   String get continueWeChat => FlutterI18n.translate(context, "continue_wechat");

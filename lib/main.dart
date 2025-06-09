@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         FlutterI18nDelegate(
           translationLoader: FileTranslationLoader(
             basePath: 'assets/i18n',
-            fallbackFile: 'vn',
+            fallbackFile: 'vi',
             useCountryCode: false,
             forcedLocale: const Locale('en'),
           ),

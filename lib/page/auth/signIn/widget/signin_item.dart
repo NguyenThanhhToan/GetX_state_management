@@ -13,7 +13,7 @@ class SignItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Get.toNamed(route!);
+        Get.toNamed(route!, arguments: {'source': 'signup'});
       },
         child: Container(
           margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
@@ -44,7 +44,6 @@ class SignItem extends StatelessWidget{
             ],
           ),
         )
-
     );
   }
 }

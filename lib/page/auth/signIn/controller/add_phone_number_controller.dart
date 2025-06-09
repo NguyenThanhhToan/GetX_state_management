@@ -20,6 +20,17 @@ class AddPhoneNumberController extends GetxController {
   String get countryCode => selectedCountry.value.isoCode;
   String get dialCode => '+${selectedCountry.value.phoneCode}';
 
+  late final String source;
+
+  @override
+  void onInit() {
+    super.onInit();
+    source = Get.arguments?['source'] ?? 'unknown';
+  }
+
+  bool get isFromSignup => source == 'signup';
+  bool get isFromProfile => source == 'profile';
+
   void updatePhoneNumber(String value) {
     phoneNumber.value = value;
   }
@@ -33,7 +44,7 @@ class AddPhoneNumberController extends GetxController {
       authService.userPhoneNumber(phoneNumber.value);
       Get.toNamed(
         AppRoutes.otpConfirm,
-        arguments: {'phone': '+84${phoneNumber.value}'},
+        arguments: {'phone': '$dialCode${phoneNumber.value}'},
       );
     }
   }

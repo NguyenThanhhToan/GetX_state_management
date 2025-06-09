@@ -8,7 +8,6 @@ import 'controller/otp_confirm_controller.dart';
 class OtpConfirm extends GetWidget<OtpConfirmController>{
   const OtpConfirm ({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     final t = T(context);

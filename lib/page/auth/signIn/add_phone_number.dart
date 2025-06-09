@@ -25,13 +25,23 @@ class AddPhoneScreen extends GetWidget<AddPhoneNumberController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  t.hi,
+                controller.isFromProfile
+                    ? Text(
+                  t.updateNubmerPhone,
                   style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  t.whatsYourMobile,
-                  style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                  )
+                    : Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      t.hi,
+                      style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      t.whatsYourMobile,
+                      style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 8),
                 Text(

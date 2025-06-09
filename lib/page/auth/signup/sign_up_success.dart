@@ -107,7 +107,6 @@ class EnableLocation extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 15.0),
               child: ElevatedButton(
@@ -127,7 +126,17 @@ class EnableLocation extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(t.canChangeInSetting, style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white))
+                Flexible(
+                  child: Text(
+                    t.canChangeInSetting,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ],
             )
           ],
@@ -187,7 +196,6 @@ class TurnOnNotification extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 15.0),
               child: ElevatedButton(
@@ -207,7 +215,17 @@ class TurnOnNotification extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(t.canChangeInSetting, style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white))
+                Flexible(
+                  child: Text(
+                    t.canChangeInSetting,
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ],
             )
           ],

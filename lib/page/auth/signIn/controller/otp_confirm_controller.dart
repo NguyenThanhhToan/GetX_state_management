@@ -1,3 +1,4 @@
+import 'package:example_app/page/auth/signIn/controller/add_phone_number_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
@@ -5,6 +6,9 @@ import 'package:get/get.dart';
 import '../../../../router/app_route.dart';
 
 class OtpConfirmController extends GetxController {
+
+  final AddPhoneNumberController addPhoneNumberController = Get.find();
+
   final otp = List.generate(6, (_) => ''.obs);
   final controllers = List.generate(6, (_) => TextEditingController());
 
@@ -27,7 +31,12 @@ class OtpConfirmController extends GetxController {
   }
 
   void confirmOTP() {
-    Get.offNamed(AppRoutes.signupAddName);
+    if(addPhoneNumberController.isFromSignup){
+      Get.offNamed(AppRoutes.signupAddName);
+    }
+    if(addPhoneNumberController.isFromProfile){
+      Get.offNamed(AppRoutes.rateService,arguments: {'source': 'profile'});
+    }
   }
 
   @override

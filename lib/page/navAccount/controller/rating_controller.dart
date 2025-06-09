@@ -8,6 +8,17 @@ class RatingController extends GetxController {
   final selectedStars = 0.obs;
   final selectedOptions = <String>[].obs;
 
+  late final String source;
+
+  @override
+  void onInit() {
+    super.onInit();
+    source = Get.arguments?['source'] ?? 'unknown';
+  }
+
+  bool get isFromService => source == 'service';
+  bool get isFromProfile => source == 'profile';
+
   void selectStars(int value) {
     selectedStars.value = value;
   }
@@ -20,9 +31,13 @@ class RatingController extends GetxController {
     }
   }
   void saveChanges() {
-    print('Stars: ${selectedStars.value}');
-    print('Options: $selectedOptions');
-    Get.back();
+    if(isFromService){
+      Get.back();
+    }
+    if(isFromProfile){
+      int count = 0;
+      Get.until((_) => count++ >= 2);
+    }
   }
 
 }

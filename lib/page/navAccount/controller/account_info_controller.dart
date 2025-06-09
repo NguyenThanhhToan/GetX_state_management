@@ -19,6 +19,11 @@ class AccountInfoController extends GetxController {
     lastNameController.text = authService.lastName.value;
     phoneController.text = authService.phoneNumber.value;
     emailController.text = authService.email.value;
+
+    ever(authService.phoneNumber, (value) {
+      phoneController.text = value ?? '';
+    });
+
   }
 
   void toggleEdit() {

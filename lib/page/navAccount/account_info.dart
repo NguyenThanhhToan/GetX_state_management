@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../component/navbar.dart';
+import '../../router/app_route.dart';
 import '../../translation/strings.dart';
 import 'controller/account_info_controller.dart';
 
@@ -56,7 +57,17 @@ class AccountInfo extends GetWidget<AccountInfoController> {
                 const SizedBox(height: 15),
                 Text(t.phoneNumber, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),
-                buildTextField(controller.phoneController, controller.isEditing.value),
+                InkWell(
+                  onTap: () {
+                    if (!controller.isEditing.value) {
+                      Get.toNamed(AppRoutes.addPhone, arguments: {'source': 'profile'});
+                    }
+                  },
+                  child: AbsorbPointer(
+                    absorbing: !controller.isEditing.value,
+                    child: buildTextField(controller.phoneController, controller.isEditing.value),
+                  ),
+                ),
                 const SizedBox(height: 15),
                 Text(t.email, style: TextStyle(fontWeight: FontWeight.w300)),
                 const SizedBox(height: 10),

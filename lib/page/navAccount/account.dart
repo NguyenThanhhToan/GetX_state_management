@@ -16,11 +16,10 @@ class AccountScreen extends GetWidget<AccountController> {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: const CustomNavBar(currentIndex: 3),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Container(
               width: double.infinity,
               height: 185,
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -33,15 +32,15 @@ class AccountScreen extends GetWidget<AccountController> {
               ),
               child: Column(
                 children: [
-                  SizedBox(height: 50),
-                  CircleAvatar(
+                  const SizedBox(height: 50),
+                  const CircleAvatar(
                     radius: 39,
                     backgroundImage: NetworkImage('https://picsum.photos/200'),
                   ),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   Text(
                     "${controller.userFirstName.value} ${controller.userLastName.value}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       color: Colors.white,
                       fontWeight: FontWeight.w800,
@@ -50,7 +49,10 @@ class AccountScreen extends GetWidget<AccountController> {
                 ],
               ),
             ),
-            Padding(
+          ),
+
+          SliverToBoxAdapter(
+            child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -81,11 +83,11 @@ class AccountScreen extends GetWidget<AccountController> {
                   const SizedBox(height: 22),
                   Text(
                     t.general,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w200,
                     ),
-                    ),
+                  ),
                   const SizedBox(height: 8),
                   AccountItem(
                     label: t.accountText4,
@@ -117,12 +119,12 @@ class AccountScreen extends GetWidget<AccountController> {
                     icon: Assets.account9,
                     route: "/help",
                   ),
+
                 ],
               ),
             ),
-
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
